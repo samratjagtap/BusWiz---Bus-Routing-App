@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pune City Bus Routing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mate+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mate+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>BusWiz</h1>
+      <h2>Bus Routing App for Pune City</h2>
+
+      <input
+        type="checkbox"
+        class="sr-only"
+        id="darkmode-toggle"
+      >
+      <label for="darkmode-toggle" class="toggle">
+        <span>Toggle dark mode</span>
+      </label>
+
+      <div class="form">
+        <label for="source">Source Station:</label>
+        <select id="source">
+          <option value="">Select Source Station</option>
+          <option value="Pune City (MRSTC, City Bus Stand, Autos, Taxis, PMC)">Pune City (MRSTC, City Bus Stand, Autos, Taxis, PMC)</option>
+          <option value="Shivaji Nagar (MRSTC, Shivaji Nagar Bus Stand, Autos, PMC)">Shivaji Nagar (MRSTC, Shivaji Nagar Bus Stand, Autos, PMC)</option>
+          <option value="Khadki (Ammunition Factory, BDL, Ring Sights India Pvt Ltd)">Khadki (Ammunition Factory, BDL, Ring Sights India Pvt Ltd)</option>
+          <option value="Dapodi (CME Museum)">Dapodi (CME Museum)</option>
+          <option value="Kasarwadi (Air Vents & Glass Factory)">
+            Kasarwadi (Air Vents & Glass Factory)
+          </option>
+          <option value="Pimpri (Pimpri Plant, TATA Plant)">Pimpri (Pimpri Plant, TATA Plant)</option>
+          <option value="Chinchwad (Bride Industries Ltd)">Chinchwad (Bride Industries Ltd)</option>
+          <option value="Akurdi (Force Motors Plant, Bajaj Tempo)">Akurdi (Force Motors Plant, Bajaj Tempo)</option>
+          <option value="Dehu Rd (Army AOC & ASC 512 Base repair Depots)">Dehu Rd (Army AOC & ASC 512 Base repair Depots)</option>
+          <option value="Begdewadi (Loco Sheds)">Begdewadi (Loco Sheds)</option>
+          <option value="Ghorawadi">Ghorawadi</option>
+          <option value="Talegaon Dabhade">Talegaon Dabhade</option>
+          <option value="Wadgaon (PWD bungalow)">Wadgaon (PWD bungalow)</option>
+          <option value="Hinjewadi">Hinjewadi</option>
+          <option value="Baner">Baner</option>
+          <option value="Wakad">Wakad</option>
+          <option value="Pimple Saudagar">Pimple Saudagar</option>
+          <!-- Add more source stations if needed -->
+        </select>
+        <label for="destination">Destination Station:</label>
+        <select id="destination">
+          <option value="">Select Destination Station</option>
+          <option value="Pune City (MRSTC, City Bus Stand, Autos, Taxis, PMC)">Pune City (MRSTC, City Bus Stand, Autos, Taxis, PMC)</option>
+          <option value="Shivaji Nagar (MRSTC, Shivaji Nagar Bus Stand, Autos, PMC)">Shivaji Nagar (MRSTC, Shivaji Nagar Bus Stand, Autos, PMC)</option>
+          <option value="Khadki (Ammunition Factory, BDL, Ring Sights India Pvt Ltd)">Khadki (Ammunition Factory, BDL, Ring Sights India Pvt Ltd)</option>
+          <option value="Dapodi (CME Museum)">Dapodi (CME Museum)</option>
+          <option value="Kasarwadi (Air Vents & Glass Factory)">
+            Kasarwadi (Air Vents & Glass Factory)
+          </option>
+          <option value="Pimpri (Pimpri Plant, TATA Plant)">Pimpri (Pimpri Plant, TATA Plant)</option>
+          <option value="Chinchwad (Bride Industries Ltd)">Chinchwad (Bride Industries Ltd)</option>
+          <option value="Akurdi (Force Motors Plant, Bajaj Tempo)">Akurdi (Force Motors Plant, Bajaj Tempo)</option>
+          <option value="Dehu Rd (Army AOC & ASC 512 Base repair Depots)">Dehu Rd (Army AOC & ASC 512 Base repair Depots)</option>
+          <option value="Begdewadi (Loco Sheds)">Begdewadi (Loco Sheds)</option>
+          <option value="Ghorawadi">Ghorawadi</option>
+          <option value="Talegaon Dabhade">Talegaon Dabhade</option>
+          <option value="Wadgaon (PWD bungalow)">Wadgaon (PWD bungalow)</option>
+          <option value="Hinjewadi">Hinjewadi</option>
+          <option value="Baner">Baner</option>
+          <option value="Wakad">Wakad</option>
+          <option value="Pimple Saudagar">Pimple Saudagar</option>
+          <!-- Add more destination stations if needed -->
+        </select>
+        <input type="button" value="Find Route" onclick="calculate()" />
+      </div>
+      <div class="results">
+        <h3>Results</h3>
+        <p><b>Fare:</b> <span id="fare"></span></p>
+        <p><b>Route: </b><br /><span id="route"></span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
